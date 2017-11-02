@@ -1,0 +1,142 @@
+:root {
+    font-size: calc(0.45em + 1vw);
+  }
+  
+  /* Colors
+  white: #fff
+  very light: #F0EBD8
+  light: #748CAB
+  normal: #3E5C76
+  dark: #1D2D44
+  accent: #2A4494
+  */
+  
+  /* font-family: 'Merriweather', serif; */
+  @import url('https://fonts.googleapis.com/css?family=Merriweather');
+  
+  /* font-family: 'Six Caps', sans-serif; */
+  @import url('https://fonts.googleapis.com/css?family=Six+Caps');
+  
+  body {
+    color: #3E5C76;
+    line-height: 1.6;
+    background: #fff;
+    font-family: 'Merriweather', serif;
+    font-size: 0.875rem;
+  }
+  
+  h1, h2, p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  h1 {
+    color: #2A4494;
+    line-height: 1;
+    font-size: 3.125rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    color: #1D2D44;
+    line-height: 1;
+    font-family: 'Six Caps', sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px
+  }
+  
+  /* Used to allow background image opacity without affecting text. 
+     Wrapper that is the same size as the background image. */
+  .hero-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* background image */
+  .hero-background {
+    background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1350&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.6;
+  }
+  
+  /* sibling text over the background image so it's not affected by opacity */
+  .hero-text {
+      position: absolute;
+      max-width: 50%;
+  }
+  
+  .hero-wrapper h1{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    color: #1D2D44;
+    line-height: 1.3;
+    text-align: center;
+  }
+  
+  .hero-wrapper h1 span {
+    color: #2A4494;
+    font-family: 'Six Caps', sans-serif;
+    display: block;
+    font-size: 5.5rem;
+    letter-spacing: 0.08em;
+    font-weight: normal;
+  }
+  
+  /* lines on hero */
+  .hero-wrapper h1::before, .hero-wrapper h1::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #1D2D44
+  }
+  
+  /* line above text */
+  .hero-wrapper h1::before {
+    margin: 0 auto 2em;
+  }
+  
+  /* line below text */
+  .hero-wrapper h1::after {
+    margin: 2em auto 0;
+  }
+  
+  /* about me grid */
+  @supports (display: grid) {
+    .about-me {
+      display: grid;
+      gird-template-columns: minmax(6em, 1fr) minmax(6em, 1fr) 
+    }
+  }
+  /* end of about me grid */
+  
+  .about-me img {
+    height: 300px;
+    wedith: 300px;
+  }
+  
+  .portfolio-item img {
+    height: 100px;
+    wedith: 100px;
+  }
+  
+  .social-icons img{
+    height: 100px;
+    wedith: 100px;
+  }
