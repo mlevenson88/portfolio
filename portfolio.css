@@ -121,22 +121,25 @@
   @supports (display: grid) {
     .about-me {
       display: grid;
-      gird-template-columns: minmax(6em, 1fr) minmax(6em, 1fr) 
+      grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    }
+
+    .about-img {
+      grid-column: port-start / img-end;
     }
   }
-  /* end of about me grid */
   
   .about-me img {
     height: 300px;
-    wedith: 300px;
+    width: 300px;
   }
   
   .portfolio-item img {
     height: 100px;
-    wedith: 100px;
+    width: 100px;
   }
   
   .social-icons img{
     height: 100px;
-    wedith: 100px;
+    width: 100px;
   }
