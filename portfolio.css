@@ -51,11 +51,11 @@
   ul {
     margin: 0;
   }
-  
+
   .container {
     width: 90%;
     margin: 0 auto;
-    max-width: 1200px
+    max-width: 55em;
   }
   
   /* Used to allow background image opacity without affecting text. 
@@ -153,6 +153,7 @@
 
   .about-img {
     height: 50%;
+    min-height: 464px;
     float: left;
     margin-right: 1em;
     max-width: 310px;
@@ -161,7 +162,7 @@
 
 
   /* about me grid start */
-  /* @supports (display: grid) {
+  @supports (display: grid) {
     .about-me {
       display: grid;
       grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
@@ -186,7 +187,7 @@
     .about-text {
       margin-bottom: 1em;
     }
-  } */
+  }
   /* about me grid end */
 
   .portfolio h1 {
