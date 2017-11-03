@@ -38,7 +38,7 @@
   
   h2 {
     font-size: 2rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     color: #1D2D44;
     line-height: 1;
     font-family: 'Six Caps', sans-serif;
@@ -46,6 +46,10 @@
   
   img {
     max-width: 100%;
+  }
+  
+  ul {
+    margin: 0;
   }
   
   .container {
@@ -117,8 +121,47 @@
     margin: 2em auto 0;
   }
   
-  /* about me grid */
-  @supports (display: grid) {
+  .about-me {
+    margin-top: 3em;
+    display: flex;
+  }
+
+  /* Keep the image left and move the text below 
+     when screen shrinks */
+  @media (max-width: 37em){
+    .about-me {
+      flex-direction: column;
+    }
+  }
+
+  .about-title {
+    margin: 0.5em 0;
+  }
+
+  .about-subtitle {
+    margin: 0.5em 0;
+  }
+
+  .about-text p {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .about-text span {
+    font-weight: 900;
+  }
+
+  .about-img {
+    height: 50%;
+    float: left;
+    margin-right: 1em;
+    max-width: 310px;
+    min-width: 310px;
+  }
+
+
+  /* about me grid start */
+  /* @supports (display: grid) {
     .about-me {
       display: grid;
       grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
@@ -126,14 +169,36 @@
 
     .about-img {
       grid-column: port-start / img-end;
+      grid-row: 1 / 2;
+      height: auto;
     }
+
+    .about-title {
+      grid-column: name / port;
+      grid-row: 1 / 2;
+      align-self: center;
+    }
+
+    .about-subtitle, .about-text{
+      grid-column: port / port;
+    }
+
+    .about-text {
+      margin-bottom: 1em;
+    }
+  } */
+  /* about me grid end */
+
+  .portfolio h1 {
+    margin: 0.5em 0;
   }
-  
-  .about-me img {
-    height: 300px;
-    width: 300px;
-  }
-  
+
+
+
+
+
+
+
   .portfolio-item img {
     height: 100px;
     width: 100px;
