@@ -207,7 +207,7 @@
   
   .portfolio-item figcaption {
     position: absolute;
-    top: 0;
+    top: 100%; /* Hides hover effect */
     bottom: 0;
     right: 0;
     left: 0;
@@ -217,14 +217,13 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    transition: top ease-in-out 250ms;
   }
 
   .portfolio-title {
     color: white;
     font-size: 3.625rem;
-
-    /* pushing text below the title to the bottom */
-    margin-bottom: auto;
+    margin-bottom: auto; /* pushing text below the title to the bottom */
   }
 
   .portfolio-link {
@@ -236,4 +235,10 @@
     text-decoration: none;
     border-bottom: 2px solid white;
     align-self: flex-start;
+  }
+
+  /* focus on mobile hover happens on touch */
+  .portfolio-item:hover figcaption,
+  .portfolio-item:focus figcaption{
+    top: 0;
   }
