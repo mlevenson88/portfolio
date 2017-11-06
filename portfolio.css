@@ -122,7 +122,7 @@
   }
   
   .about-me {
-    margin-top: 3em;
+    margin: 5em 0;
     display: flex;
   }
 
@@ -190,22 +190,50 @@
   }
   /* about me grid end */
 
-  .portfolio h1 {
-    margin: 0.5em 0;
+  .portfolio {
+    text-align: center;
+    background: #F0EBD8;
+    padding: 5em 0;
   }
 
-
-
-
-
-
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+  }
 
   .portfolio-item img {
-    height: 100px;
-    width: 100px;
+    display: block;
   }
   
-  .social-icons img{
-    height: 100px;
-    width: 100px;
+  .portfolio-item figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2em;
+    background: rgba(42,68,148, .5);
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-title {
+    color: white;
+    font-size: 3.625rem;
+
+    /* pushing text below the title to the bottom */
+    margin-bottom: auto;
+  }
+
+  .portfolio-link {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    /* remove underline for link and add my own */
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    align-self: flex-start;
   }
