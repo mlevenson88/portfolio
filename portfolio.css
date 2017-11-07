@@ -52,6 +52,9 @@
     margin: 0;
   }
 
+  figure {
+    margin: 0;
+  }
   .container {
     width: 90%;
     margin: 0 auto;
@@ -196,13 +199,24 @@
     padding: 5em 0;
   }
 
+  .portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-items .container {
+    max-width: 75em;
+  }
+
   .portfolio-item {
     position: relative;
     overflow: hidden;
+    flex: 1 1 20rem;
   }
 
   .portfolio-item img {
     display: block;
+    width: 100%;
   }
   
   .portfolio-item figcaption {
@@ -222,8 +236,19 @@
 
   .portfolio-title {
     color: white;
-    font-size: 3.625rem;
+    font-size: 2.5rem;
     margin-bottom: auto; /* pushing text below the title to the bottom */
+  }
+
+
+
+  .portfolio-description {
+    display: none;
+  }
+
+  .featured .portfolio-description {
+    display: block;
+    display: none;
   }
 
   .portfolio-link {
@@ -239,6 +264,29 @@
 
   /* focus on mobile hover happens on touch */
   .portfolio-item:hover figcaption,
-  .portfolio-item:focus figcaption{
+  .portfolio-item:focus figcaption {
     top: 0;
+  }
+
+  /* If browser supports the grid, display the following 
+    for the portfolio items */               
+  @supports (display: grid) {
+    .portfolio-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
+    }
+
+    .portfolio-item.featured {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    .portfolio-item.featured .portfolio-title {
+      font-size: 5rem;
+    }
+
+    .potfolio-desc {
+      display: block;
+    }
   }
