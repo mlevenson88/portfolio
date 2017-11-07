@@ -272,7 +272,7 @@
     .portfolio-items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1em;
+      /*grid-gap: 1em;*/
     }
 
     .portfolio-item.featured {
@@ -287,4 +287,39 @@
     .potfolio-desc {
       display: block;
     }
+  }
+
+  .contact {
+    padding: 5em 0;
+  }
+
+  .contact h1 {
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-top: 1em;
+    color: #1D2D44;
+  }
+
+  input, textarea {
+    box-sizing: border-box;
+    display: block;
+    padding: 0.75em;
+    width: 100%;
+    background: #F0EBD8;
+    border: 1px solid #1D2D44;
+    font-size: 1.2rem;
+  }
+
+  .button {
+    display: block;
+    width: 30%;
+    margin-top: 1em;
+    margin-left: auto;
+    background: #2A4494;
+    border: none;
+    color: white;
+    font-family: 'Six Caps', sans-serif;
   }
