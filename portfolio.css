@@ -23,6 +23,7 @@
     background: #fff;
     font-family: 'Merriweather', serif;
     font-size: 0.875rem;
+    margin: 0;
   }
   
   h1, h2, p {
@@ -378,8 +379,11 @@
     top: 0;
     bottom: 0;
     left: 0;
-    right: 15%;
+    right: 20%;
     z-index: 10;
+
+    transform: translateX(-100%); /* move all the way left on the x-axis */
+    transition: transform ease-out 250ms;
   }
 
   nav li {
@@ -404,3 +408,37 @@
     line-height: 0;
     text-align: center;
   }
+
+  .close-icon {
+    display: none;
+  }
+
+  .menu-button {
+    z-index: 10; /* make the button on top */
+  }
+
+  .container-all {
+    transition: transform ease-out 250ms;
+  }
+
+  /* When the nav is open have these properties */
+  .nav-is-open nav{
+    transform: translateX(0);
+  }
+
+  .nav-is-open .container-all {
+    transform: translateX(80%);
+  }
+
+  .nav-is-open .close-icon {
+    display: block;
+  }
+
+  .nav-is-open .hamburger {
+    display: none;
+  }
+
+  .nav-is-open .menu-button {
+    transform: translateX(-50%);
+  }
+  /* End of properties for when the nav is open */
