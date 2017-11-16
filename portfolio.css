@@ -24,6 +24,7 @@
     font-family: 'Merriweather', serif;
     font-size: 0.875rem;
     margin: 0;
+    overflow-x: hidden;
   }
   
   h1, h2, p {
@@ -375,7 +376,7 @@
   }
 
   nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -417,11 +418,12 @@
     z-index: 10; /* make the button on top */
   }
 
-  .container-all {
-    transition: transform ease-out 250ms;
+  /* When the nav is open have these properties */
+  .nav-is-open { /* no scrolling down when nav is open */
+    height: 100vh;
+    overflow-y: hidden;
   }
 
-  /* When the nav is open have these properties */
   .nav-is-open nav{
     transform: translateX(0);
   }
