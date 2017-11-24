@@ -10,10 +10,10 @@ const bodyClassList = document.body.classList;
 /* add class .nav-is-open to the body when button is clicked */
 navToggle.addEventListener('click', function(){
     containerAllStyle.transition = 'transform 250ms ease-in-out';
-    bodyClassLis.toggle('nav-is-open');
+    bodyClassList.toggle('nav-is-open');
 })
 
 nav.addEventListener('click', function(){
     containerAllStyle.transition = '0ms';
-    bodyClassLis.remove('nav-is-open')
+    bodyClassList.remove('nav-is-open')
 })
